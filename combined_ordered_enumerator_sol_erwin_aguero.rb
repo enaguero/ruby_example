@@ -22,8 +22,9 @@ class CombinedOrderedEnumerator < Enumerator
   class UnorderedEnumerator < RuntimeError
     attr :enumerator
 
-    def initialize(enumerator)
+    def initialize(enumerator, new_variable)
       @enumerator = enumerator
+      @new_variable = new_variable
     end
 
   end
